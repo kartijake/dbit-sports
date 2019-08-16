@@ -60,6 +60,9 @@ def awards(request):
 def teamlist(request):
     return render(request, 'teamlist.html', {})
 
+def ped(request):
+    return render(request, 'PED.html', {})
+
 
 # def sports(request, category):
 # 	sports = Sports.objects.get(name=cat)
