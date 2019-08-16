@@ -1,0 +1,229 @@
+<div class="pt-5" style="  background: #bdc3c7;
+/* fallback for old browsers */
+background: -webkit-linear-gradient(#bbb, #fff);
+/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#bbb, #ddd);
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+
+
+    <div class="ml-5 mr-5 show pl-2 ">
+        <div class="d-flex justify-content-around">
+            <div class="col-5 jumbotron  mt-1 wow slideInLeft">
+                <div id="vision" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="4000">
+                    <div class="carousel-inner " style=" width:100%; height: 500px !important;">
+                        <div class="carousel-item active">
+                            <h3 class="" style="padding-top:5em"><strong>Vision</strong></h3>
+                            <div class="d-flex align-items-center">
+                                <p class="align-self-center" style="padding-top:1em"> "To engage in relentless pursuit
+                                    of Excellence
+                                    in
+                                    the promotion and development of Physical Education and Sports through innovative
+                                    programmes in
+                                    coaching & activities and evolve a holistic approach to the betterment of human
+                                    resources through a
+                                    harmonious blend of body, mind and spirit"</p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item " style=" width:100%; height: 180em !important;">
+                            <h3 class="justify-self-center "><strong>Mission</strong></h3>
+                            <p class="text-justify"><strong>1.</strong>To design and introduce innovative, integrated,
+                                inter-disciplinary curriculum in Physical Education and various Sports and games and
+                                allied areas and
+                                provide Leadership to the Profession.
+                                <br><strong>2.</strong> To produce competent health conscious Physical Education
+                                teachers at various
+                                levels, who will be fully equipped to impart instruction in Physical Education and
+                                undertake physical
+                                activity programmes for Students and Staff.
+                                <br><strong>3.</strong>To closely collaborate and coordinate with the State and National
+                                bodies in
+                                Physical Education and Sports, in matters of common interest and concern.
+                                <br><strong>4.</strong>To actively design programme for the promotion and development of
+                                fitness and
+                                health concept among the students, faculty and the community around so as to mould them
+                                into
+                                physically
+                                fit and emotionally matured citizens.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-5 pt-5 mt-5  wow slideInRight text-justify" data-wow-delay="1s">
+                <h2>Department of Sports</h2>
+
+
+                <p> Don Bosco Institute of Technology, Department of Physical Education &amp;
+                    Sports is a cell of major activity in the Campus. It was established in 2001 it is
+                    Affiliated to Visvesvaraya Technological University (VTU, Belgaum). The
+                    Department of Physical Education &amp; Sports is well equipped with modern
+                    infrastructure and conducts activities like Basketball, Volleyball, Badminton,
+                    Table Tennis, Cricket, Handball, Softball, Judo, Football, Netball, Chess,
+                    Carom, Athletics and Martial Arts. Sports are in fact a way of life for the
+                    student’s health and fitness and those looking for professional star status.
+                    Physical education, a learning experience, offers a unique opportunity for
+                    problem – solving, self-expression and socialization. A well-implemented,
+                    comprehensive programme is an essential component for the growth of both
+                    mind and body.
+                </p>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+<div class="container pl-2 show mt-5 pt-5 mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="col ml-5"
+                style="background-color:#000080;color: white; height: 40px;font-size: 30px;box-shadow: 0px 10px;"><a
+                    style="color: white"
+                    href="https://drive.google.com/uc?id=1jw2n1DeK4sfhzgN34zoUYKUnfLDn9h8D">Upcoming
+                    Events</a></div>
+            <div class="col shadow ml-5" style="border: 1px solid #1C6EA4; height: 350px;">
+
+                <marquee behaviour="scroll" direction="up" onmouseover="this.stop()" onmouseout="this.start()"
+                    style="height: 350px;">
+
+                    {% for i in upcoming %}
+                    <li>
+                        {{i.name}} <br>Date: {{i.date}}
+                    </li>
+                    {% endfor %}
+
+                </marquee>
+            </div>
+        </div>
+        <div class="col">
+            <div class="col ml-5"
+                style="background-color:#000080;color: white; height: 40px;font-size: 30px;box-shadow: 0px 10px;">Recent
+                Events</div>
+            <div class="col shadow ml-5" style="border: 1px solid #1C6EA4; height: 350px;">
+
+                <marquee behaviour="scroll" direction="up" onmouseover="this.stop()" onmouseout="this.start()"
+                    style="height: 350px;">
+
+                    {% for i in recent %}
+                    <li>
+                        {{i.name}} <br>Date: {{i.date}}
+                    </li>
+                    {% endfor %}
+                </marquee>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="background-gray" style=" background: #bdc3c7;
+/* fallback for old browsers */
+background: -webkit-linear-gradient(#bbb, #fff);
+/* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(#bbb, #ddd);
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */">
+    <hr class="mt-5 mb-5">
+    <div class="container pb-5">
+        <div class="row mt-5 mb-5 d-flex flex-row show">
+            <div class="col wow slideInDown" style=" left: 8em">
+                <div class="rounded-circle ml-5"><img
+                        src="https://drive.google.com/uc?id=1-3ZsXn2mLJwXP4HsTkSKvjo9j2_tZ4Px" width="300px"
+                        height="300px" class="rounded-circle brdr">
+
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="pr-5 mt-5  pt-5">
+                    <strong style="font-size:1.5em"> Dr. KUMARA SWAMY</strong><br>
+                    <div style="font-size: 1.2em">Physical Education Director</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-row-reverse show mr-5">
+            <div class="col mr-5 pr-5">
+                <div class=""><img
+                        src="https://drive.google.com/uc?id=0B4NjHO1JQtzPMHFKbnBxSlJneldqRE5yVFhRSlcwTGlqVXRB"
+                        width="300px" height="300px" class="rounded-circle brdr" alt="">
+
+
+                </div>
+            </div>
+            <div class="col pl-5">
+                <div class="pl-5 pr-5 ml-5 mt-5 pt-5">
+                    <strong style="font-size:1.5em">Mr. AJAY.T</strong><br>
+                    <div style="font-size: 1.2em">Assistant Physical Education Director</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row d-flex flex-row show mr-5">
+            <div class="col mr-5 " style="left: 8em">
+                <div class="rounded circle mr-5"><img
+                        src="https://drive.google.com/uc?id=1-CTLZCqIaFPUhCfz_W8aOaSpm3KxdHmE" width="300px"
+                        height="300px" class="rounded-circle brdr" alt="">
+
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="pr-5 mt-5 pt-5">
+                    <strong style="font-size:1.5em;">Mr. SRINIVASA MURTHY K.M.</strong><br>
+                    <div style="font-size: 1.2em">Office Assistant</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- coaches table -->
+<hr>
+<div class="display-4">
+    <center><strong>Coaches</strong></center>
+</div>
+<div class="container mt-5 mb-5">
+
+
+    <table class="table" style="font-size: 1.3em;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Sl No.</th>
+                <th scope="col">Name</th>
+                <th scope="col">Event</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Arun Kumar V</td>
+                <td>Kabaddi</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Aadhi</td>
+                <td>Soft Ball</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>BasketBall</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!---- life in dbit-->
+<hr>
+<center>
+    <div class="text_for_dbit pt-3">
+
+        <p> LIFE IN DBIT</p>
+    </div>
+</center>

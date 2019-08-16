@@ -1,0 +1,42 @@
+<style type="text/css">
+    .preloader {
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: opacity 1s ease;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+    }
+
+    .preloader .content {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .preload-finished {
+        opacity: 0;
+        pointer-events: none;
+        overflow: autos;
+    }
+
+    .bouncy {
+        position: relative;
+        top: 20%;
+        left: 0;
+        animation: bounce 2s linear 0s infinte alternate;
+    }
+
+    @keyframes bounce {
+        0%
+    }
+</style>
+
+<div class="preloader">
+    <div class="content"></div>
+</div>

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <title>Awards</title>
+  <style media="screen">
+    .borderLeft {
+      border-left: 2px solid #f51c40;
+      position: absolute;
+      top: 50%;
+      bottom: 0;
+    }
+
+    .under {
+      border: none;
+      border-bottom: 2px solid #fff;
+
+    }
+
+    .under:hover {
+      animation: underline1 2s forwards;
+    }
+
+
+
+    @keyframes underline1 {
+      0% {
+        border-color: #ffffff
+      }
+
+      25% {
+        border-color: #999
+      }
+
+      50% {
+        border-color: #777
+      }
+
+      75% {
+        border-color: #555
+      }
+
+      100% {
+        border-color: #333
+      }
+    }
+
+    .marquee {
+      top: 6em;
+      position: relative;
+      box-sizing: border-box;
+      animation: marquee 15s linear infinite;
+    }
+
+    .marquee:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee {
+      0% {
+        top: 10em
+      }
+
+      100% {
+        top: 0em
+      }
+    }
+
+
+    .carousel-item.imag {
+      height: 500px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-item img {
+      width: 100%;
+    }
+
+    .brdr:hover {
+      border: 8px solid #6789f8;
+    }
+
+
+
+    html {
+      overflow-x: hidden;
+      max-width: 120%;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .dropright:hover>.dropdown-menu {
+      display: grid;
+    }
+
+    .dropright-toggle::after {
+      display: none;
+    }
+
+    .app-footer {
+      text-align: center;
+      margin-left: -12%;
+      background-color: #444444;
+      color: white;
+    }
+
+    .text_for_dbit {
+      padding-top: 10px;
+      font-family: "times";
+      font-size: 30px;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    }
+
+    .text_for_dbit:hover {
+      text-decoration: underline;
+    }
+
+    /*for club logo*/
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+
+    figure.snip0018 {
+      font-family: 'Raleway', Arial, sans-serif;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      min-width: 220px;
+      max-width: 310px;
+      max-height: 220px;
+      width: 100%;
+      background: #000000;
+      text-align: center;
+    }
+
+    figure.snip0018 * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    figure.snip0018 img {
+      opacity: 1;
+      width: 100%;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s;
+    }
+
+    figure.snip0018 figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    figure.snip0018 figcaption>div {
+      height: 50%;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    figure.snip0018 figcaption::before {
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      left: 50%;
+      height: 2px;
+      content: '';
+      opacity: 0;
+      background-color: rgba(255, 255, 255, 0);
+      -webkit-transition: all 0.4s;
+      transition: all 0.4s;
+      -webkit-transition-delay: 0.6s;
+      transition-delay: 0.6s;
+    }
+
+    figure.snip0018 h2,
+    figure.snip0018 p {
+      margin: 0;
+      padding: 30px 35px;
+      opacity: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+      transition: opacity 0.4s, -webkit-transform 0.4s, -moz-transform 0.4s, -o-transform 0.4s, transform 0.4s;
+    }
+
+    figure.snip0018 h2 {
+      display: inline-block;
+      word-spacing: -0.1em;
+      font-weight: 300;
+      text-transform: uppercase;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      -webkit-transform: translate3d(0%, 50%, 0);
+      transform: translate3d(0%, 50%, 0);
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    figure.snip0018 h2 span {
+      font-weight: 800;
+    }
+
+    figure.snip0018 p {
+      font-weight: 300;
+      top: 0%;
+      color: #000;
+      background: #F5DEB3;
+      -webkit-transform: translate3d(0%, -50%, 0);
+      transform: translate3d(0%, -50%, 0);
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    figure.snip0018 a {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      color: #ffffff;
+    }
+
+    figure.snip0018:hover img {
+      opacity: 0.7;
+    }
+
+    figure.snip0018:hover figcaption h2,
+    figure.snip0018:hover figcaption p {
+      -webkit-transform: translate3d(0%, 0%, 0);
+      transform: translate3d(0%, 0%, 0);
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+
+    figure.snip0018:hover figcaption h2 {
+      opacity: 1;
+    }
+
+    figure.snip0018:hover figcaption p {
+      opacity: 1;
+    }
+
+    figure.snip0018:hover figcaption::before {
+      background: #F5DEB3;
+      left: 0px;
+      right: 0px;
+      opacity: 1;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+
+    .imag {
+      width: inherit;
+      height: 85%;
+    }
+
+    .imag-1 {
+      width: 60%;
+      height: 80%;
+    }
+  </style>
+</head>
+
+<body>
+  {% include 'navbar.html' %}
+  {% block con %}
+
+  <div class="text-center">
+    <div class=" mr-5 display-4 d-inline-block">
+      <p class="under">College Awards</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row pt-4">
+      <h6 class="mb-4"> <strong>Recieving cash award from VTU for best performance in sports and games for the year
+          2011-12</strong> </h6>
+      <div class="col-8 mr-3">
+
+        <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPRGR2WHozeEU3Q3ZnNmhQc1NPUXNvakcxZnJR" alt="" class="imag">
+
+      </div>
+      <div class=" col pt-1">
+
+        <br>
+        <br>
+        <br>
+
+        <p class="border-left border-dark pl-3 text-justify"><strong>Sri C.T Ravi</strong> Ministry of Higher Education
+          and
+          <strong>Dr. H.
+            Maheshappa VC</strong>.VTU
+          Felicitated 1 Lakh Cash Awardees Colleges <strong>Dr.V.S Ramamurthy</strong> Principal DBIT and <strong>Mr.
+            Kumara Swamy</strong>, Physical Education Director DBIT, <Strong>Dr.S.A. Kori</Strong> Register VTU,
+          <strong>Sri Venkatesh Prasad</strong> , Former Indian International Cricket Player, were Present on occasion.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <strong class="display-5  mb-4">Visvesvaraya Technological University, based on the VTU affiliated colleges sports
+        &
+        games performance 2016-17</strong>
+      <div class="col-8 mr-3">
+
+        <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPQTVaOG5GWURsUWlkZDNpd0habjRlQ21nZldB" alt="" class="imag">
+      </div>
+      <div class=" col d-flex">
+
+        <p class="border-left border-dark pl-3 text-justify align-self-center"><strong> Mr.Arjun Devaiah</strong>
+          International Sports
+          Person and
+          <strong>Dr. Karisiddappa VC.</strong> VTU
+          Felicitated 1 Lakh Cash Awardees Colleges <strong>Dr.M Muralidhar Rao</strong>, Principal DBIT and <strong>Dr.
+            Kumara Swamy</strong>, Physical Education Director DBIT, Dr. Satish Annigeri, Register of Evaluation, Ms. M.
+          A. Sapna Finance Officer & Dr. Arif Ali Khan, Director of Physical Education Present on occasion.
+        </p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  <hr>
+  <div class="text-center	display-4 mb-4">
+    VTU Awards
+  </div>
+
+  <div class="">
+    <div class="row mt-3">
+      <div class="col-3 d-flex">
+        <h3 class="mt-2 pl-5 align-self-center">VTU Rank Holders</h3>
+      </div>
+      <div class="col-md-4">
+        <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPZ215b1M3S0NqUGg1c1pPbDQ1ZzRRVmszQngw" alt=""
+          class='imag-1'><br>
+        <center>
+          <strong>Mr.Yateesh H.C(Mech)</strong><br>
+          <p>5th rank in BE</p>
+          <p>Kho-Kho and KAbbadi player</p>
+        </center>
+
+
+      </div>
+      <!-- <div class="col-md-6"></div> -->
+
+      <div class='col-md-4'>
+        <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPVTc0eGdwYkRneFZFc2JySml6NzFHQzNadThJ" alt=""
+          class="imag-1">
+
+      </div>
+      <!-- <div class="col-md-6"></div> -->
+    </div>
+  </div>
+
+  <div class="container">
+
+
+  </div>
+  <hr>
+  <div class="text-center mb-5 display-4">
+    State Awards
+
+  </div>
+  <div class="container">
+    <div class="row d-flex ">
+      <div class="col-md-6">
+        <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPY2RZR3RiM0ZQR3BWMGJtT1N3aDBrVWF5amgw" alt="" class='imag'>
+
+      </div>
+      <div class="col-md-6 align-self-around"> <br><br>Karnataka state Olympic association hosted the tenth award
+        distribution
+        ceremony at the
+        Rajbhavan. Governor Bhardawaj presided over the function and Karnataka Minister for Youth Services and Fisheries
+        <strong> K. Abhay Chandra Jain</strong></div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="section footer-classic context-dark bg-image " style="background: #333; color: aliceblue">
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-md-4 col-xl-5">
+          <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light"
+                src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37"
+                srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae totam a mi</p>
+            <!-- Rights-->
+            <p class="rights"><span>©  </span><span
+                class="copyright-year">2018</span><span> </span><span>DBIT</span><span>. </span><span>All Rights
+                Reserved.</span></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacts</h5>
+          <dl class="contact-list">
+            <dt>Address:</dt>
+            <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatum doloremque ut praesentium et
+              laborum, error aliquam libero nihil deserunt, debitis porro quod blanditiis consequuntur harum?
+              Exercitationem commodi omnis officiis.</dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>email:</dt>
+            <dd><a href="mailto:#">@gmail.com</a></dd>
+          </dl>
+          <dl class="contact-list">
+            <dt>phones:</dt>
+            <dd><a href="tel:#">+91 7568543012</a> <span>or</span> <a href="tel:#">+91 9571195353</a>
+            </dd>
+          </dl>
+        </div>
+        <div class="col-md-4 col-xl-3">
+          <h5>Links</h5>
+          <ul class="nav-list">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-around">
+      <a href="https://www.facebook.com/DonBoscoGroupofInstitutions/"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/donboscoblr"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.youtube.com/user/Donboscoinstitute12"><i class="fab fa-youtube"></i></a>
+
+    </div>
+  </footer>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <script type="text/javascript">
+    ScrollReveal({
+      reset: true
+    });
+    new WOW().init();
+    ScrollReveal().reveal('.show', {
+      delay: 100
+    });
+    $('#departmentPhotos').on("load", function () {
+      $(".loader-wrapper").fadeOut("slow");
+    });
+
+
+  </script>
+
+
+  {% endblock %}
+
+</body>
+
+</html>

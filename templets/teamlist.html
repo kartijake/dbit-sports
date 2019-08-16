@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap" rel="stylesheet">
+
+</head>
+<style type="text/css">
+    body {
+        object-fit: fill;
+        background-image: url("https://drive.google.com/uc?id=1z58-iIliOZ9XHBUnGO1TklERD1-iVT-h");
+
+
+    }
+
+    .our-team {
+        text-align: center;
+    }
+
+    .our-team .pic {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .our-team .pic:before,
+    .our-team .pic:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 13px solid #e6e5e5;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .our-team .pic:after {
+        border-color: #37b0f1 #e6e5e5 #e6e5e5 #37b0f1;
+        z-index: 1;
+        transform: rotate(-10deg);
+        transition: all 0.5s ease 0s;
+    }
+
+    .our-team:hover .pic:after {
+        transform: rotate(350deg);
+    }
+
+    .our-team img {
+        width: 100%;
+        height: auto;
+    }
+
+    .our-team .title {
+        font-size: 26px;
+        font-weight: bold;
+        color: #222;
+        padding-bottom: 10px;
+        margin: 15px 0 10px 0;
+        position: relative;
+    }
+
+    .our-team .title:after {
+        content: "";
+        width: 30px;
+        height: 2px;
+        background: #222;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .our-team .post {
+        display: block;
+        font-size: 16px;
+        font-style: italic;
+        color: #777;
+    }
+
+    .our-team .icon {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
+
+    .our-team .icon li {
+        display: inline-block;
+    }
+
+    .our-team .icon li a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        background: #e0e0e0;
+        font-size: 14px;
+        color: #999;
+        margin-right: 5px;
+        transition: all 0.3s ease-out 0s;
+    }
+
+    .our-team .icon li a:hover {
+        background: #37b0f1;
+        color: #fff;
+    }
+
+    @media only screen and (max-width: 990px) {
+        .our-team {
+            margin-bottom: 30px;
+        }
+    }
+
+    .responsive {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
+
+    .sp span {
+        font-family: 'Dancing Script', cursive;
+        border-bottom: 4px solid #f00;
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .sp span {
+            font-size: 8vw;
+        }
+    }
+</style>
+{% extends 'navbar.html' %}
+{% block content %}
+
+<body>
+    <img src="https://drive.google.com/uc?id=1FiQFh8uF72rq-3Q-GhluzIMet02pc4KF" class="responsive">
+    <section id="dep-faculty">
+        <center>
+            <div class="container mt-4 mb-4 sp">
+                <h1><span>Department Faculty</span></h1>
+            </div>
+        </center>
+        <div class="container rounded w-50" style="background-color: whitesmoke">
+
+            <div class="row">
+                <div class="col-6 p-3">
+                    <img src="https://drive.google.com/uc?id=0B4NjHO1JQtzPMHFKbnBxSlJneldqRE5yVFhRSlcwTGlqVXRB"
+                        class="d-block w-100 rounded-circle" alt="" srcset="">
+                </div>
+                <div class="col-5">
+                    <div class="d-flex flex-column">
+
+                        <div class="name display-3">Name</div>
+                        <div class="desig display-4">Designation</div>
+                        <div class="name pt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi quibusdam
+                            ut
+                            sunt laborum illo magnam
+                            temporibus. Magni tempora aspernatur autem id sit. Dolore ipsum molestiae impedit sit a
+                            quasi? Suscipit?</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 rounded w-50" style="background-color: whitesmoke">
+
+            <div class="row">
+
+                <div class="col-5">
+                    <div class="d-flex flex-column">
+
+                        <div class="name display">
+                            <h3>Mr. SRINIVASA MURTHY K.M.</h3>
+                        </div>
+                        <div class="desig display-4">Designation</div>
+                        <div class="name pt-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi quibusdam
+                            ut
+                            sunt laborum illo magnam
+                            temporibus. Magni tempora aspernatur autem id sit. Dolore ipsum molestiae impedit sit a
+                            quasi? Suscipit?</div>
+
+                    </div>
+                </div>
+                <div class="col-6 p-3 rounded-circle">
+                    <img src="https://drive.google.com/uc?id=1-CTLZCqIaFPUhCfz_W8aOaSpm3KxdHmE"
+                        class="d-block w-100 rounded-circle" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <center>
+        <div class="container mt-4 mb-4 sp">
+            <h1><span>Faculty Co-ordinators</span></h1>
+        </div>
+    </center>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mt-4">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=12bqIJ0ghxRVqXuHXOi-E5B1X9YJGd76U" alt="">
+                    </div>
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Web Developer</span>
+
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mt-4">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1Kko3HT0-NWqjOLFVTsZ-XU8oju0SA9pj" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-4">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1Hmr1dd5l5mtvz2gh1je3wgQ660402QM5" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-4">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1l2__5pP80DzAXFWi0kecNM88TY-nBHXL" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1Qy8QI8b1uF8GDakulJNRUD8y1YRyFJhw" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img
+                            src="https://drive.google.com/uc?id=0B4NjHO1JQtzPdVVmUXVlcHJIMkNkMjA5UE9qNXQ4aDVnRnhF"
+                            alt=""></div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1uz6ihZR0z3PJkzUFRvGiB5d4T73K5JJR" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1e5K2M9m8y6hR57MpvIyiMyNlKzW8tX_1" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1mpIZBbHEl3-ixNY7J5vldsKhRRQqLMHc" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1F6tsBsXnPdObFlN4MGwdnvaQRZUrgbaq" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=18_Cf09zf7QCqiQe-NjLX_gMtxOKWMZ-F" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1Uv97inOoGlKDjOEkjZQlgsze4pNVECXW" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1RXOhEICEaOAUB4osxd31blcTw6CwVqkz" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1MkWCg4Ns_myaozsgWLnmM10jvMDZNx8y" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1ep3EHzm6KA5M9EpH9Gm1dZO-OBNk5TVU" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1jXbWtLP2fAsKiGjazdKB7GyUx4U-5WcH" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1d99sSuvahC_Vm4H4r_Yf3vilgYIvLoT7" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mt-5">
+                <div class="our-team">
+                    <div class="pic"><img src="https://drive.google.com/uc?id=1vxJJUVeXPOt22F8FLzjNDqhIVRwI3m7C" alt="">
+                    </div>
+                    <h3 class="title">Kristiana</h3>
+                    <span class="post">Web Designer</span>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

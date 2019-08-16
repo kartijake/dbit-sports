@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="https://drive.google.com/uc?id=0B4NjHO1JQtzPd1VqYzRfX3pCRE4zdXB6ZHVGaGNOWEV3Wk9R">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <style type="text/css">
+    .dropdown:hover>.dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .dropdown-toggle::after {
+      display: none;
+    }
+
+    .dropright:hover>.dropdown-menu {
+      display: grid;
+      margin-left: 0;
+    }
+
+    .dropright-toggle::after {
+      display: none;
+    }
+
+    .nav-item::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      position: absolute;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0;
+    }
+
+    .nav-item:hover::after {
+      width: 100%;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top pb-1 " style="height:10vh;">
+    <a class="navbar-brand h-1" href="#">
+      <img class="w-1 h-1" src="https://drive.google.com/uc?id=0B4NjHO1JQtzPd1VqYzRfX3pCRE4zdXB6ZHVGaGNOWEV3Wk9R"
+        width="100" height="100%" alt="">
+    </a>
+    <a class="navbar-brand" href="#">
+      <div></div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link" href='{% url "home" %}'>Home </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/About" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <!-- second level dropdown -->
+            <li class="">
+              <a class=" dropdown-item " href="{% url 'vtu_events' %}" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vision and Mission</a>
+
+            </li>
+            <!-- second level dropdown -->
+            <li class="">
+              <a class="dropdown-item " href="{% url 'college_event' %}" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Objectives</a>
+
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href='{% url "administrative" %}'>Administrative</a>
+        </li>
+        <!-- First level dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+          <ul class="dropdown-menu">
+            <!-- second level dropdown -->
+            <li class="dropright">
+              <a class="dropdown-toggle dropdown-item " href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Outdoor</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/category=Cricket"><img
+                      src="https://image.flaticon.com/icons/svg/10/10585.svg" alt="" height="20" width="20"> Cricket</a>
+                </li>
+                <li><a class="dropdown-item" href="/category=Basketball"><img
+                      src="https://image.flaticon.com/icons/svg/55/55243.svg" alt="" height="20" width="20">
+                    Basketball</a></li>
+                <li><a class="dropdown-item" href="/category=Softball"><img
+                      src="https://image.flaticon.com/icons/svg/731/731947.svg" alt="" height="20" width="20">
+                    Softball</a></li>
+                <li><a class="dropdown-item" href="/category=Hockey"><img
+                      src="https://image.flaticon.com/icons/svg/177/177413.svg" alt="" height="20" width="20">
+                    Hockey</a></li>
+                <li><a class="dropdown-item" href="/category=Throwball"><img
+                      src="https://image.flaticon.com/icons/svg/731/731947.svg" alt="" height="20" width="20"> Throw
+                    Ball</a></li>
+                <li><a class="dropdown-item" href="/category=Athletics"><img
+                      src="https://image.flaticon.com/icons/svg/233/233146.svg" alt="" height="20" width="20">
+                    Athletics</a></li>
+                <li><a class="dropdown-item" href="/category=Kabbadi"><img
+                      src="https://image.flaticon.com/icons/svg/94/94107.svg" alt="" height="20" width="20"> Kabbadi</a>
+                </li>
+                <li><a class="dropdown-item" href="/category=Volleyball"><img
+                      src="https://image.flaticon.com/icons/svg/67/67678.svg" alt="" height="20" width="20"> Volley
+                    Ball</a></li>
+                <li><a class="dropdown-item" href="/category=Badminton"><img
+                      src="https://image.flaticon.com/icons/svg/1668/1668461.svg" alt="" height="20" width="20">
+                    Badminton</a></li>
+
+              </ul>
+            </li>
+            <!-- second level dropdown -->
+            <li class="dropright">
+              <a class="dropdown-toggle dropdown-item " href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Indoor</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/category=Chess"><img
+                      src="https://image.flaticon.com/icons/svg/726/726165.svg" alt="" height="20" width="20"> Chess</a>
+                </li>
+                <li><a class="dropdown-item" href="/category=Tabletennis"><img
+                      src="https://image.flaticon.com/icons/svg/125/125252.svg" alt="" height="20" width="20"> Table
+                    Tennis</a></li>
+                <li><a class="dropdown-item" href="/category=Archery"><img
+                      src="https://image.flaticon.com/icons/svg/53/53773.svg" alt="" height="20" width="20"> Archery</a>
+                </li>
+                <li><a class="dropdown-item" href="/category=Weightlifting"><img
+                      src="https://image.flaticon.com/icons/svg/38/38464.svg" alt="" height="20" width="20"> Weight
+                    Lifting</a></li>
+                <li><a class="dropdown-item" href="/category=Yoga"><img
+                      src="https://image.flaticon.com/icons/svg/84/84145.svg" alt="" height="20" width="20"> Yoga</a>
+                </li>
+                <li><a class="dropdown-item" href="/category=Wrestling"><img
+                      src="https://image.flaticon.com/icons/svg/125/125269.svg" alt="" height="20" width="20">
+                    Wrestling</a></li>
+                <li><a class="dropdown-item" href="/category=Boxing"><img
+                      src="https://image.flaticon.com/icons/svg/140/140596.svg" alt="" height="20" width="20">
+                    Boxing</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Events
+          </a>
+          <ul class="dropdown-menu">
+            <!-- second level dropdown -->
+            <li class="">
+              <a class=" dropdown-item " href="{% url 'vtu_events' %}" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">VTU
+                Events</a>
+
+            </li>
+            <!-- second level dropdown -->
+            <li class="">
+              <a class="dropdown-item " href="{% url 'college_event' %}" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">College Events</a>
+
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{% url 'alumini' %}">Alumini</a>
+        </li>
+
+        <li class="nav-item dropdown"><a class="nav-link" href="{% url 'awards' %}">Awards</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{% url 'NSS' %}">NSS Unit</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.facebook.com/DonBoscoGroupofInstitutions/"><i
+              class="fab fa-facebook"></i></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="https://twitter.com/donboscoblr"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.youtube.com/user/Donboscoinstitute12"><i class="fab fa-youtube"></i></a>
+
+        </li>
+      </ul>
+    </div>
+  </nav>
+  {% block content %}
+  {% endblock %}
+</body>
+
+</html>

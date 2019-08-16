@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VTU EVENTS</title>
+	 <meta charset="UTF-8">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style type="text/css">
+/*main menue*/
+
+    /*sub menue*/
+    @import url(https://fonts.googleapis.com/css?family=Roboto);
+.ind{z-index: 1;}
+section#nav-test {
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section#nav-test #nav-container {
+  position: relative;
+  padding:20px auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+section#nav-test #nav-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #323639;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0;
+}
+section#nav-test #nav-container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 48px;
+  margin-left: 60px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section#nav-test #nav-container ul li:first-child {
+  margin-left: 0;
+}
+section#nav-test #nav-container ul li a {
+  color: #f1f1f1;
+}
+section#nav-test #nav-container #line {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: red;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+section#nav-test h1 {
+  margin-top: 30px;
+  font-weight: 500;
+  color: #212121;
+}
+
+
+
+  	@import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
+.timeline {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 700px;
+  position: relative;
+}
+.timeline__content-title {
+  font-weight: normal;
+  font-size: 66px;
+  margin: -10px 0 0 0;
+  transition: .4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Pathway Gothic One", sans-serif;
+  color: #fff;
+}
+.timeline__content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Cardo;
+  font-weight: normal;
+  line-height: 25px;
+}
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+@media only screen and (max-width: 767px) {
+  .timeline:before {
+    left: 40px;
+  }
+}
+.timeline-item {
+  padding: 40px 0;
+  opacity: .3;
+  filter: blur(2px);
+  transition: .5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+  transform: translateY(-80px);
+}
+.timeline-item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: "Pathway Gothic One", sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  opacity: 0;
+  right: calc(-100% - 56px );
+}
+.timeline-item:nth-child(even) {
+  align-self: flex-end;
+}
+.timeline-item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px );
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+.timeline-item--active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+.timeline-item--active:before {
+  top: 50%;
+  transition: .3s all .2s;
+  opacity: 1;
+}
+.timeline-item--active .timeline__content-title {
+  margin: -50px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .timeline-item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .timeline-item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .timeline-item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.timeline-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(99, 99, 99, 0.8);
+  content: "";
+}
+.timeline-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.timeline-header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: Cardo;
+  font-weight: normal;
+  margin: 0;
+}
+.timeline-header__subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}
+
+.demo-footer {
+  padding: 60px 0;
+  text-align: center;
+}
+.demo-footer a {
+  color: #999;
+  display: inline-block;
+  font-family: Cardo;
+}
+
+  </style>
+</head>
+<body>
+<!--main nav bar-->
+ {% include 'navbar.html'%}
+ {% block content %}
+<!--sub nav-->
+<section id="nav-test" class="ind">
+  <div id="nav-container">
+    <ul>
+      <li class="nav-li active-nav"><a href="#">Home</a></li>
+      <li class="nav-li"><a href="file:///C:/Users/Jake/Documents/results.html">Resuts</a></li>
+      <li class="nav-li"><a href="file:///C:/Users/Jake/Documents/vtu-gallery.html">Gallery</a></li>
+     
+    </ul>
+    <div id="line"></div>
+  </div>
+</section>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+
+
+
+<div class="timeline-container" id="timeline-1">
+  <div class="timeline-header">
+    <h2 class="timeline-header__title">TIME LINE</h2>
+    <h3 class="timeline-header__subtitle">VTU TOURNAMENTS</h3>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item" data-text="Archery">
+      <div class="timeline__content"><img class="timeline__img" src="https://drive.google.com/uc?id=1AikKQqBDnhRXLkGv_OQYoLk0sbp0PRb8"/>
+        <h2 class="timeline__content-title">2018</h2>
+        <p class="timeline__content-desc">VTU Inter – collegiate Archery Men & Women Competition held on 9th May 2018. Chief Guest for this competition Sri. Poornachandra .K, Regional Director, VTU, South Region, Bangalore, Dr. R. Krishna Group Director, DBGI, Dr. M. Muralidhara Rao Principal, DBIT & Dr. Kumaraswamy Director of Physical Education, DBIT, Bangalore. </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Cricket">
+      <div class="timeline__content"><img class="timeline__img" src="https://drive.google.com/uc?id=1_NM95-G5t9xCjZs4AqkIUEZtdrp1o8vH"/>
+        <h2 class="timeline__content-title">2018</h2>
+        <p class="timeline__content-desc">VTU Inter-Collegiate Bangalore South Zone Cricket Tournament, Chief Gust for this tournament Sri. Raghav Bylappa Secretary, WET. Dr. R. Krishna Group Director, DBGI, Dr. M. Muralidhara Rao Principal DBIT & Dr. Kumaraswamy Director of Physical Education, DBIT, Bangalore held from 27th Feb to 12th March 2018. 
+</p>
+      </div>
+    </div>
+ 
+    <div class="timeline-item" data-text="Soft Ball">
+      <div class="timeline__content"><img class="timeline__img" src="https://drive.google.com/uc?id=1TLZcjQSTv4nWhmXFpaxDyyxjhJKZZeY_"/>
+        <h2 class="timeline__content-title">2016</h2>
+        <p class="timeline__content-desc">
+         VTU Inter- Collegiate Bangalore Zone, Rest of Bangalore Zone (Men), Single Zone (Women) & Inter Zone (Men) Soft Ball Competition held from: 2nd to 6th November 2016. Chief Guest for this competition Sri. K.R.Ashok Kumar. International Soft Ball Player, Karnataka State Dasara Award Winner, Regional Director, VTU South Region, Bangalore. Guest of Honour, Kum. Sneha P.J International Net Ball Player, Karnataka Olympic Association & Kempegowda Award Winner. Dr. P Shrinivas Rao Executive Dean, DBGI, Bangalore, Dr. R. Prakash Principal DBIT, & Dr. Kumaraswamy Physical Education Director DBIT, Bangalore. <i><strong>SOFT BALL</strong></i>
+        </p>
+      </div>
+    </div>
+    <div class="timeline-item" data-text="Volley Ball">
+      <div class="timeline__content"><img class="timeline__img" src="https://drive.google.com/uc?id=1QlvSQ6RT7pbacXlJB9fGpkkjlgLwZaVU"/>
+        <h2 class="timeline__content-title">2016</h2>
+        <p class="timeline__content-desc">VTU Inter- Collegiate Bangalore South Zone Volley Ball Competition held from: 30th Feb & 1th March 2016. Chief Guest for this competition Dr,Bettegowda Presidents of Karnataka Volley Ball Association & Vice-President of Volley Ball Federation of India. Guest of Honour Sri. K.R. Ashok Kumar Regional Director, VTU, South Region Bangalore Dr. V.S Ramamurthy Principal DBIT,  & Mr. Kumaraswamy Physical Education Director DBIT, Bangalore</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script type="text/javascript">
+  	(function($) {
+  $.fn.timeline = function() {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".timeline-item"),
+      activeClass: "timeline-item--active",
+      img: ".timeline__img"
+    };
+    selectors.item.eq(0).addClass(selectors.activeClass);
+    selectors.id.css(
+      "background-image",
+      "url(" +
+        selectors.item
+          .first()
+          .find(selectors.img)
+          .attr("src") +
+        ")"
+    );
+    var itemLength = selectors.item.length;
+    $(window).scroll(function() {
+      var max, min;
+      var pos = $(this).scrollTop();
+      selectors.item.each(function(i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        var that = $(this);
+        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+          selectors.item.removeClass(selectors.activeClass);
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              selectors.item
+                .last()
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.last().addClass(selectors.activeClass);
+        } else if (pos <= max - 40 && pos >= min) {
+          selectors.id.css(
+            "background-image",
+            "url(" +
+              $(this)
+                .find(selectors.img)
+                .attr("src") +
+              ")"
+          );
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+
+$("#timeline-1").timeline();
+
+  </script>
+  <!--script for sub navbar-->
+  <script type="text/javascript">
+    (function() {
+  var $activeWidth, $defaultMarginLeft, $defaultPaddingLeft, $firstChild, $line, $navListItem;
+
+  $line = $('#line');
+
+  $navListItem = $('.nav-li');
+
+  $activeWidth = $('.active-nav').width();
+
+  $firstChild = $('.nav-li:first-child');
+
+  $defaultMarginLeft = parseInt($('.nav-li:first-child').next().css('marginLeft').replace(/\D/g, ''));
+
+  $defaultPaddingLeft = parseInt($('#nav-container > ul').css('padding-left').replace(/\D/g, ''));
+
+  $line.width($activeWidth + 'px');
+
+  $line.css('marginLeft', $defaultPaddingLeft + 'px');
+
+  $navListItem.click(function() {
+    var $activeNav, $currentIndex, $currentOffset, $currentWidth, $initWidth, $marginLeftToSet, $this;
+    $this = $(this);
+    $activeNav = $('.active-nav');
+    $currentWidth = $activeNav.width();
+    $currentOffset = $activeNav.position().left;
+    $currentIndex = $activeNav.index();
+    $activeNav.removeClass('active-nav');
+    $this.addClass('active-nav');
+    if ($this.is($activeNav)) {
+      return 0;
+    } else {
+      if ($this.index() > $currentIndex) {
+        if ($activeNav.is($firstChild)) {
+          $initWidth = $defaultMarginLeft + $this.width() + $this.position().left - $defaultPaddingLeft;
+        } else {
+          $initWidth = $this.position().left + $this.width() - $currentOffset;
+        }
+        $marginLeftToSet = $this.position().left + $defaultMarginLeft + 'px';
+        $line.width($initWidth + 'px');
+        return setTimeout(function() {
+          $line.css('marginLeft', $marginLeftToSet);
+          return $line.width($this.width() + 'px');
+        }, 175);
+      } else {
+        if ($this.is($firstChild)) {
+          $initWidth = $currentOffset - $defaultPaddingLeft + $defaultMarginLeft + $currentWidth;
+          $marginLeftToSet = $this.position().left;
+        } else {
+          $initWidth = $currentWidth + $currentOffset - $this.position().left;
+          $marginLeftToSet = $this.position().left + $defaultMarginLeft;
+        }
+        $line.css('marginLeft', $marginLeftToSet);
+        $line.width($initWidth + 'px');
+        return setTimeout(function() {
+          return $line.width($this.width() + 'px');
+        }, 175);
+      }
+    }
+  });
+
+}).call(this);
+  </script>
+
+  {% endblock %}
+</body>
+</html>

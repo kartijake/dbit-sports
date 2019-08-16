@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+ 
+  <style media="screen">
+    .subnav{z-index: 1;
+
+    }
+    .shad{
+      box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 6px 0 15px -4px rgba(31, 73, 125, 0.8), -5px 0 15px -4px rgba(31, 73, 125, 0.8);
+       align-content: center;
+          }
+          .shad h2{
+            font-style: italic;
+            size: 2px;
+            color: white;
+
+          }
+    
+
+
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 50px 0 75px;
+  width: 100%;
+  height: 500px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+/*css for table*/
+
+
+h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center; }
+
+h2 {
+  margin: 0 0 .5em;
+  font-weight: normal; }
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1; }
+
+.row {
+  display: flex; }
+  .row .col {
+    flex: 1; }
+    .row .col:last-child {
+      margin-left: 1em; }
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); }
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden; }
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #2c3e50;
+    font-weight: bold;
+    cursor: pointer;
+    /* Icon */ }
+    .tab-label:hover {
+      background: #1a252f; }
+    .tab-label::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s; }
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: #2c3e50;
+    background: white;
+    transition: all .35s; }
+  .tab-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: #2c3e50;
+    cursor: pointer; }
+    .tab-close:hover {
+      background: #1a252f; }
+
+input:checked + .tab-label {
+  background: #1a252f; }
+  input:checked + .tab-label::after {
+    transform: rotate(90deg); }
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em; }
+
+/*# sourceMappingURL=style.css.map */
+
+/*container for results*/
+.shad{
+      box-shadow: 0 9px 0px 0px white, 0 -9px 0px 0px white, 6px 0 15px -4px rgba(31, 73, 125, 0.8), -5px 0 15px -4px rgba(31, 73, 125, 0.8);
+       
+          }
+          .shad h2{
+            font-style: italic;
+            size: 2px;
+            color: white;
+
+          }
+
+
+ /*for table content*/
+ .table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+.heading-for-table h2{
+	color:white;
+	font-style: italic;
+	font-size: 30px;
+	padding-left: 60px;
+	margin-top: 30px;
+}
+/*sub nav*/
+ @import url(https://fonts.googleapis.com/css?family=Roboto);
+.ind{z-index: 1;}
+section#nav-test {
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section#nav-test #nav-container {
+  position: relative;
+  padding:20px auto;
+  box-sizing: border-box;
+  width: 100%;
+}
+section#nav-test #nav-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #323639;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0;
+}
+section#nav-test #nav-container ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 48px;
+  margin-left: 60px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+section#nav-test #nav-container ul li:first-child {
+  margin-left: 0;
+}
+section#nav-test #nav-container ul li a {
+  color: #f1f1f1;
+}
+section#nav-test #nav-container #line {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: red;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+section#nav-test h1 {
+  margin-top: 30px;
+  font-weight: 500;
+  color: #212121;
+}
+</style>
+
+
+
+</head>
+<body style="  background: #25303B;">
+
+  {% include 'navbar.html' %}
+  {% block content %}
+<!--sub nav-->
+<section id="nav-test" class="ind">
+  <div id="nav-container">
+    <ul>
+      <li class="nav-li active-nav"><a href="{% url 'college_event' %}">Home</a></li>
+      <li class="nav-li"><a href="{% url 'college_results'%}">Resuts</a></li>
+      <li class="nav-li"><a href="">Gallery</a></li>
+     
+    </ul>
+    <div id="line"></div>
+  </div>
+</section>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<!--start of slides show-->
+<div class="slideshowContainer">
+  
+<!-- Replace the image 'src' with the images in your project.
+Javascript is set up so that you can add as many images as you like, but make sure that you match the number of 'circle' span elements (below) to the number of images -->
+  <img class="imageSlides" src="http://s1.picswalls.com/wallpapers/2015/09/20/beautiful-hd-wallpaper-2015_111526537_269.jpg" alt="beach side city view">
+  <img class="imageSlides" src="http://4.bp.blogspot.com/-oxlezteeOII/TfiTImj4RlI/AAAAAAAAA1k/UAgctmU5VZo/s1600/Widescreen+Unique+And+Beautiful+Photography+%25284%2529.jpg" alt="leaf on the ground">
+  <img class="imageSlides" src="https://i.pinimg.com/originals/cf/ed/a0/cfeda03d01da4b779093c9d928c01dee.jpg" alt="lake surrounded by mountains">
+  
+<!-- I would recommend to replace these 'span' elements with 'img' files
+for each the left and right arrow that fits your project, and size accordingly.
+I've shown 'span' elements because I didn't want to upload files. -->
+  <span id ="leftArrow" class="slideshowArrow">&triangleleft;</span>
+  <span id ="rightArrow" class="slideshowArrow">&triangleright;</span>
+  
+  <div class="slideshowCircles">
+<!-- Filled 'dot' class is set to first image in slideshow, and then via Javascript the filled 'dot' class follows the current image.
+Make sure you match the number of these 'circle' span elements to the number of images in your slideshow. -->
+    <span class="circle dot"></span>
+    <span class="circle"></span>
+    <span class="circle"></span>
+  </div>
+  
+</div>
+<script type="text/javascript">
+	// IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+var imageSlides = document.getElementsByClassName('imageSlides');
+var circles = document.getElementsByClassName('circle');
+var leftArrow = document.getElementById('leftArrow');
+var rightArrow = document.getElementById('rightArrow');
+var counter = 0;
+
+// HIDE ALL IMAGES FUNCTION
+function hideImages() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    imageSlides[i].classList.remove('visible');
+  }
+}
+
+// REMOVE ALL DOTS FUNCTION
+function removeDots() {
+  for (var i = 0; i < imageSlides.length; i++) {
+    circles[i].classList.remove('dot');
+  }
+}
+
+// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+function imageLoop() {
+  var currentImage = imageSlides[counter];
+  var currentDot = circles[counter];
+  currentImage.classList.add('visible');
+  removeDots();
+  currentDot.classList.add('dot');
+  counter++;
+}
+
+// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+function arrowClick(e) {
+  var target = e.target;
+  if (target == leftArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == 1) {
+      counter = (imageSlides.length - 1);
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 10000);
+    } else {
+      counter--;
+      counter--;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 10000);
+    }
+  } 
+  else if (target == rightArrow) {
+    clearInterval(imageSlideshowInterval);
+    hideImages();
+    removeDots();
+    if (counter == imageSlides.length) {
+      counter = 0;
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 10000);
+    } else {
+      imageLoop();
+      imageSlideshowInterval = setInterval(slideshow, 10000);
+    }
+  }
+}
+
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);
+
+
+// IMAGE SLIDE FUNCTION
+function slideshow() {
+  if (counter < imageSlides.length) {
+    imageLoop();
+  } else {
+    counter = 0;
+    hideImages();
+    imageLoop();
+  }
+}
+
+// SHOW FIRST IMAGE, & THEN SET & CALL SLIDE INTERVAL
+setTimeout(slideshow, 1000);
+var imageSlideshowInterval = setInterval(slideshow, 10000);
+</script>
+<!--script for sub nav-->
+<script type="text/javascript">
+    (function() {
+  var $activeWidth, $defaultMarginLeft, $defaultPaddingLeft, $firstChild, $line, $navListItem;
+
+  $line = $('#line');
+
+  $navListItem = $('.nav-li');
+
+  $activeWidth = $('.active-nav').width();
+
+  $firstChild = $('.nav-li:first-child');
+
+  $defaultMarginLeft = parseInt($('.nav-li:first-child').next().css('marginLeft').replace(/\D/g, ''));
+
+  $defaultPaddingLeft = parseInt($('#nav-container > ul').css('padding-left').replace(/\D/g, ''));
+
+  $line.width($activeWidth + 'px');
+
+  $line.css('marginLeft', $defaultPaddingLeft + 'px');
+
+  $navListItem.click(function() {
+    var $activeNav, $currentIndex, $currentOffset, $currentWidth, $initWidth, $marginLeftToSet, $this;
+    $this = $(this);
+    $activeNav = $('.active-nav');
+    $currentWidth = $activeNav.width();
+    $currentOffset = $activeNav.position().left;
+    $currentIndex = $activeNav.index();
+    $activeNav.removeClass('active-nav');
+    $this.addClass('active-nav');
+    if ($this.is($activeNav)) {
+      return 0;
+    } else {
+      if ($this.index() > $currentIndex) {
+        if ($activeNav.is($firstChild)) {
+          $initWidth = $defaultMarginLeft + $this.width() + $this.position().left - $defaultPaddingLeft;
+        } else {
+          $initWidth = $this.position().left + $this.width() - $currentOffset;
+        }
+        $marginLeftToSet = $this.position().left + $defaultMarginLeft + 'px';
+        $line.width($initWidth + 'px');
+        return setTimeout(function() {
+          $line.css('marginLeft', $marginLeftToSet);
+          return $line.width($this.width() + 'px');
+        }, 175);
+      } else {
+        if ($this.is($firstChild)) {
+          $initWidth = $currentOffset - $defaultPaddingLeft + $defaultMarginLeft + $currentWidth;
+          $marginLeftToSet = $this.position().left;
+        } else {
+          $initWidth = $currentWidth + $currentOffset - $this.position().left;
+          $marginLeftToSet = $this.position().left + $defaultMarginLeft;
+        }
+        $line.css('marginLeft', $marginLeftToSet);
+        $line.width($initWidth + 'px');
+        return setTimeout(function() {
+          return $line.width($this.width() + 'px');
+        }, 175);
+      }
+    }
+  });
+
+}).call(this);
+  </script>
+<center>
+<div class="container">
+<div class="winners mt-5 shad">
+	<h2>6TH ANNUAL ATHLATICE MEET – 2019</h2>
+	<h2>RESULTS</h2>
+</div>
+</div>
+</center>
+<!--table-->
+<div class="row">
+ 
+  <div class="col">
+    
+    <div class="tabs">
+      <div class="tab">
+        <input type="radio" id="rd1" name="rd">
+        <label class="tab-label" for="rd1">men</label>
+        <div class="tab-content">
+        <div> <a href="#m1"><p>1.	100 Mts Run</p></a></div>
+  <div><a href="#m2"><p>2.	200 Mts Run</p></a></div>
+   <div><a href="#m3"><p>3.	400 Mts Run</p></a></div>
+  <div><a href="#m4"> <p>4.	800 Mts Run</p></a></div>
+   <div><a href="#m5"><p>5.	1500 Mts Run</p></a></div>
+   <div><a href="#m6"><p>6.	Shot-Put</p></a></div>
+   <div><a href="#m7"><p>7.	Discus Throw</p></a></div>
+   <div><a href="#m8"><p>8.	Javelin Throw</p></a></div>
+   <div><a href="#m9"><p>9.	Long Jump</p></a></div>
+   <div><a href="#m10"><p>10. 4 X 100 Mts Run</p></a></div>
+        </div>
+      </div>
+      <div class="tab">
+        <input type="radio" id="rd2" name="rd">
+        <label class="tab-label" for="rd2">women</label>
+        <div class="tab-content">
+        <div> <a href="#l1"> <p>1.	100 Mts Run</p></a></div>
+   <div><a href="#l2"><p>2.	200 Mts Run</p></a></div>
+   <div><a href="#l3"><p>3.	400 Mts Run</p></a></div>
+ <div><a href="#l4"><p>4.	Shot-Put</p></a></div>
+   <div><a href="#l5"><p>5.	Discus Throw</p></a></div>
+   <div><a href="#l6"><p>6.	Javelin Throw</p></a></div>
+   <div><a href="#l7"><p>7.	Long Jump</p></a></div>
+   <div><a href="#l8"><p>8.	4 X 100 Mts Run</p></a></div>
+        </div>
+      </div>
+      <div class="tab">
+        <input type="radio" id="rd3" name="rd">
+        <label for="rd3" class="tab-close"> &times;</label>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--table contents-->
+<div class="heading-for-table" id="m1">
+	<h2>100-Meter Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+           <td>{{object1.place}}</td>
+            <td>{{object1.student_name}}</td>
+            <td>{{object1.semister}}</td>
+            <td>{{object1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{object2.place}}</td>
+            <td>{{object2.student_name}}</td>
+            <td>{{object2.semister}}</td>
+            <td>{{object2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{object3.place}}</td>
+            <td>{{object3.student_name}}</td>
+            <td>{{object3.semister}}</td>
+            <td>{{object3.branch}}</td>
+           
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+<div class="heading-for-table" id="m2">
+	<h2>200-Meter Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mm21.place}}</td>
+            <td>{{mm21.student_name}}</td>
+            <td>{{mm21.semister}}</td>
+            <td>{{mm21.branch}}</td>
+            
+        </tr>
+        <tr>
+             <td>{{mm22.place}}</td>
+            <td>{{mm22.student_name}}</td>
+            <td>{{mm22.semister}}</td>
+            <td>{{mm22.branch}}</td>
+           
+        </tr>
+        <tr>
+             <td>{{mm23.place}}</td>
+            <td>{{mm23.student_name}}</td>
+            <td>{{mm23.semister}}</td>
+            <td>{{mm23.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+<div class="heading-for-table" id="m3">
+	<h2>400-Meter Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mm41.place}}</td>
+            <td>{{mm41.student_name}}</td>
+            <td>{{mm41.semister}}</td>
+            <td>{{mm41.branch}}</td>
+            
+        </tr>
+        <tr>
+           <td>{{mm42.place}}</td>
+            <td>{{mm42.student_name}}</td>
+            <td>{{mm42.semister}}</td>
+            <td>{{mm42.branch}}</td>
+        </tr>
+        <tr>
+           <td>{{mm43.place}}</td>
+            <td>{{mm43.student_name}}</td>
+            <td>{{mm43.semister}}</td>
+            <td>{{mm43.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m4">
+	<h2>800-Meter Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mm81.place}}</td>
+            <td>{{mm81.student_name}}</td>
+            <td>{{mm81.semister}}</td>
+            <td>{{mm81.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{mm82.place}}</td>
+            <td>{{mm82.student_name}}</td>
+            <td>{{mm82.semister}}</td>
+            <td>{{mm82.branch}}</td>
+            
+           
+        </tr>
+        <tr>
+            <td>{{mm83.place}}</td>
+            <td>{{mm83.student_name}}</td>
+            <td>{{mm83.semister}}</td>
+            <td>{{mm83.branch}}</td>
+            
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m5">
+	<h2>1500-Meter Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mm151.place}}</td>
+            <td>{{mm151.student_name}}</td>
+            <td>{{mm151.semister}}</td>
+            <td>{{mm151.branch}}</td>
+            
+            
+        </tr>
+        <tr>
+            <td>{{mm152.place}}</td>
+            <td>{{mm152.student_name}}</td>
+            <td>{{mm152.semister}}</td>
+            <td>{{mm152.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{mm153.place}}</td>
+            <td>{{mm153.student_name}}</td>
+            <td>{{mm153.semister}}</td>
+            <td>{{mm153.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m6">
+	<h2>Shot-Put Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ms1.place}}</td>
+            <td>{{ms1.student_name}}</td>
+            <td>{{ms1.semister}}</td>
+            <td>{{ms1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{ms2.place}}</td>
+            <td>{{ms2.student_name}}</td>
+            <td>{{ms2.semister}}</td>
+            <td>{{ms2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{ms3.place}}</td>
+            <td>{{ms3.student_name}}</td>
+            <td>{{ms3.semister}}</td>
+            <td>{{ms3.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m7">
+	<h2>Discus Throw Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{md1.place}}</td>
+            <td>{{md1.student_name}}</td>
+            <td>{{md1.semister}}</td>
+            <td>{{md1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{md2.place}}</td>
+            <td>{{md2.student_name}}</td>
+            <td>{{md2.semister}}</td>
+            <td>{{md2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{md3.place}}</td>
+            <td>{{md3.student_name}}</td>
+            <td>{{md3.semister}}</td>
+            <td>{{md3.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m8">
+	<h2>Javelin Throw Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mj1.place}}</td>
+            <td>{{mj1.student_name}}</td>
+            <td>{{mj1.semister}}</td>
+            <td>{{mj1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{mj2.place}}</td>
+            <td>{{mj2.student_name}}</td>
+            <td>{{mj2.semister}}</td>
+            <td>{{mj2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{mj3.place}}</td>
+            <td>{{mj3.student_name}}</td>
+            <td>{{mj3.semister}}</td>
+            <td>{{mj3.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m9">
+	<h2>Long Jump Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ml1.place}}</td>
+            <td>{{mlj1.student_name}}</td>
+            <td>{{ml1.semister}}</td>
+            <td>{{ml1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{ml2.place}}</td>
+            <td>{{ml2.student_name}}</td>
+            <td>{{ml2.semister}}</td>
+            <td>{{ml2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{ml3.place}}</td>
+            <td>{{ml3.student_name}}</td>
+            <td>{{ml3.semister}}</td>
+            <td>{{ml3.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="m10">
+	<h2>4 X 100 Mts Men</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{mr1.place}}</td>
+            <td>{{mr1.student_name}}</td>
+            <td>{{mr1.semister}}</td>
+            <td>{{mr1.branch}}</td>
+            
+        </tr>
+        <tr>
+            <td>{{mr2.place}}</td>
+            <td>{{mr2.student_name}}</td>
+            <td>{{mr2.semister}}</td>
+            <td>{{mr2.branch}}</td>
+           
+        </tr>
+        <tr>
+            <td>{{mr3.place}}</td>
+            <td>{{mr3.student_name}}</td>
+            <td>{{mr3.semister}}</td>
+            <td>{{mr3.branch}}</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+<div class="heading-for-table" id="l1">
+	<h2>100-Meter Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+<div class="heading-for-table" id="l2">
+	<h2>200-Meter Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+<div class="heading-for-table" id="l3">
+	<h2>400-Meter Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="l4">
+	<h2>Shot-Put Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="l5">
+	<h2>Discus Throw Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="l6">
+	<h2>Javelin Throw Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="l7">
+	<h2>Long Jump Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+
+<div class="heading-for-table" id="l8">
+	<h2>4 X 100 Mts Women</h2>
+</div>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Place</th>
+            <th>Student Name</th>
+            <th>Branch</th>
+            <th>Semister</th>
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            <td>Content 1</td>
+            
+        </tr>
+        <tr>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+            <td>Content 2</td>
+           
+        </tr>
+        <tr>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            <td>Content 3</td>
+            
+        </tr>
+       
+        
+        <tbody>
+    </table>
+</div>
+
+{% endblock %}
+
+</body>
+</html>

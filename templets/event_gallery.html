@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/path/to/parallax.js"></script>
+<style type="text/css">
+
+/*menue*/
+body {
+
+  background: -webkit-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* IE10 */
+  background:      -o-linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* Opera 11.10+ */
+  background:         linear-gradient(90deg, #16222A 10%, #3A6073 90%); /* W3C */
+        
+}
+
+.parent2 {
+  top:15px;
+  left:15px;
+  position:fixed;
+ display:block;
+  width:100px;
+  height:100px;
+  background-color:transparent;
+  border-radius:50%;
+  z-index:20;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.test1 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    position:absolute;
+}
+.test2 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  z-index:19;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .2s;
+}
+.test3 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+    top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .4s;  
+}
+  .test4 {
+  width:60%;
+  height:60%;
+  background-color:dimGray;
+  border-radius:50%;
+  position:absolute;
+  color:white;
+  text-align:center;
+  line-height:70px;
+  top:25%;
+  left:25%;
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550) .6s;  
+}
+.mask2 {
+  top:15px;
+  left:15px;
+  width:100px;
+  height:100px;
+  background:darkSlateGray;
+  border-radius:50%;
+  position:absolute;
+  z-index:21;
+  color:white;
+  text-align:center;
+  line-height:120px;
+  cursor:pointer;
+  position:fixed;
+}
+
+/**************************/
+
+	@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Amatic SC', cursive;
+}
+.block{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+.block .sep h2{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0;
+  top: 5%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  font-weight: 400;
+}
+.block h2{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0;
+  top: 15%;
+  transform: translateY(-50%);
+  font-size: 50px;
+  color: white;
+  font-weight: 400;
+}
+
+.img-parallax {
+  width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  pointer-events: none
+}
+.container1{padding-top: 100px;}
+
+
+/*table */
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+</style>
+<body>
+ <!--nav bar-->
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+
+  <div class="parent2">
+  <div class="test1"><i class="fa fa-info-circle fa-2x"></i></div>
+  <div class="test2"><i class="fa fa-camera fa-2x"></i></div>
+  <div class="test3"><i class="fa fa-users fa-2x"></i></div>
+  <div class="test4"><i class="fa fa-bell-o fa-2x"></i></div>
+  <div class="mask2"><i class="fa fa-home fa-3x"></i></div>
+</div>
+  
+<!--script-->
+<script type="text/javascript">
+  $(document).ready(function() {
+
+  var active1 = false;
+  var active2 = false;
+  var active3 = false;
+  var active4 = false;
+
+    $('.parent2').on('mousedown touchstart', function() {
+    
+    if (!active1) $(this).find('.test1').css({'background-color': 'gray', 'transform': 'translate(0px,125px)'});
+    else $(this).find('.test1').css({'background-color': 'dimGray', 'transform': 'none'}); 
+     if (!active2) $(this).find('.test2').css({'background-color': 'gray', 'transform': 'translate(60px,105px)'});
+    else $(this).find('.test2').css({'background-color': 'darkGray', 'transform': 'none'});
+      if (!active3) $(this).find('.test3').css({'background-color': 'gray', 'transform': 'translate(105px,60px)'});
+    else $(this).find('.test3').css({'background-color': 'silver', 'transform': 'none'});
+      if (!active4) $(this).find('.test4').css({'background-color': 'gray', 'transform': 'translate(125px,0px)'});
+    else $(this).find('.test4').css({'background-color': 'silver', 'transform': 'none'});
+    active1 = !active1;
+    active2 = !active2;
+    active3 = !active3;
+    active4 = !active4;
+      
+    });
+});
+</script>
+
+
+
+
+<div class="block">
+  <img src="https://unsplash.it/1920/1920/?image=1005" data-speed="-1" class="img-parallax">
+  <h2>ABOUT</h2>
+
+
+</div>
+
+
+<div class="block">
+  <img src="" data-speed="1" class="img-parallax">
+  <h2 class="sep"> Photo gallery</h2>
+  <div class="container1">
+  {% include 'demo.html' %}
+  {% block content %}
+  {% endblock %}
+  </div>
+</div>
+
+
+<div class="block">
+  <img src="https://unsplash.it/1920/1920/?gravity=center" data-speed="-0.25" class="img-parallax">
+
+  <div id="member" class="display-2 mt-4 pt-5" style="color: white;">Members</div>
+<div class="container" style="height:550px;">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+     
+      <th scope="col">Name</th>
+      <th scope="col">Designation</th>
+      <th scope="col">Sem/Branch</th>
+      <th scope="col">Contact Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td><div class="chip">
+  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Person" width="96" height="96">
+  John Doe
+</div></td>
+      <td>President</td>
+      <td>ECE</td>
+      <td>9467289134</td>
+    </tr>
+    <tr>
+      
+      <td><div class="chip">
+  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Person" width="96" height="96">
+  Max
+</div></td>
+      <td>Member</td>
+      <td>ME</td>
+      <td>8735617812</td>
+    </tr>
+    <tr>
+      
+      <td><div class="chip">
+  <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Person" width="96" height="96">
+  Mary
+</div></td>
+      <td>Member</td>
+      <td>CSE</td>
+      <td>97365421671</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+ 
+<div class="block">
+  <img src="https://unsplash.it/1920/1920/?image=1080" data-speed="0.25" class="img-parallax">
+  <h2>Parallax Speed 0.25</h2>
+</div>
+
+<div class="block">
+  <img src="https://unsplash.it/1920/1920/?random" data-speed="-0.75" class="img-parallax">
+  
+    <div id="reg" class="display-1 pt-3 pb-3" style="color: white;">Register</div>
+<div class="container mb-5" style="">
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdUYpWVb3toAxUXY_drO4pRw6XhG0vDQ2DRkvbC0w46eMjbuA/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+</div>
+</div>
+</div>
+<div class="block">
+  <img src="https://unsplash.it/1920/1920/?blur" data-speed="0.75" class="img-parallax">
+  <h2>Parallax Speed 0.75</h2>
+</div>
+
+<script type="text/javascript">
+	
+$('.img-parallax').each(function(){
+  var img = $(this);
+  var imgParent = $(this).parent();
+  function parallaxImg () {
+    var speed = img.data('speed');
+    var imgY = imgParent.offset().top;
+    var winY = $(this).scrollTop();
+    var winH = $(this).height();
+    var parentH = imgParent.innerHeight();
+
+
+    // The next pixel to show on screen      
+    var winBottom = winY + winH;
+
+    // If block is shown on screen
+    if (winBottom > imgY && winY < imgY + parentH) {
+      // Number of pixels shown after block appear
+      var imgBottom = ((winBottom - imgY) * speed);
+      // Max number of pixels until block disappear
+      var imgTop = winH + parentH;
+      // Porcentage between start showing until disappearing
+      var imgPercent = ((imgBottom / imgTop) * 100) + (50 - (speed * 50));
+    }
+    img.css({
+      top: imgPercent + '%',
+      transform: 'translate(-50%, -' + imgPercent + '%)'
+    });
+  }
+  $(document).on({
+    scroll: function () {
+      parallaxImg();
+    }, ready: function () {
+      parallaxImg();
+    }
+  });
+});
+
+
+</script>
+</main>
+</body>
+</html>
