@@ -11,6 +11,12 @@
   <meta charset="utf-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
   <script src="https://unpkg.com/scrollreveal@4"></script>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/nizarmah/calendar-javascript-lib/master/calendarorganizer.min.css">
+<script type="text/javascript" src="https://cdn.rawgit.com/nizarmah/calendar-javascript-lib/master/calendarorganizer.min.js"></script>
+
+
+
   <title>DBIT Sports</title>
   <style media="screen">
     body {
@@ -231,6 +237,134 @@
     }
 
     /*news clipping*/
+    /*upcoming*/
+    * {
+  box-sizing: border-box;
+}
+    .container {
+  margin-top: 40px;
+
+  width: 400px;
+
+}
+.light {
+  background-color: #fff;
+}
+
+
+.calendar {
+  width: 370px;
+  box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.75);
+  font-family: 'Roboto', sans-serif;
+  padding: 20px 30px;
+  color: #363b41;
+  display: inline-block;
+}
+.calendar_header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+.header_copy {
+  color: #a39d9e;
+  font-size: 20px;
+}
+.calendar_plan {
+  margin: 20px 0 40px;
+}
+.cl_plan {
+  width: 100%;
+  height: 140px;
+  background-image: linear-gradient(-222deg, #ff8494, #ffa9b7);
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  color: #fff;
+}
+.cl_copy {
+  font-size: 20px;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.calendar_events {
+  color: #a39d9e;
+}
+.ce_title {
+  font-size: 14px;
+}
+.event_item {
+  margin: 18px 0;
+  padding: 5px;
+  cursor: pointer;
+}
+.event_item:hover {
+  background-image: linear-gradient(-222deg, #ff8494, #ffa9b7);
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+.event_item:hover .ei_Dot {
+  background-color: #fff;
+}
+.event_item:hover .ei_Copy, .event_item:hover .ei_Title {
+  color: #fff;
+}
+.ei_Dot, .ei_Title {
+  display: inline-block;
+}
+.ei_Dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #a39d9e;
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+.dot_active {
+  background-color: #ff8494;
+}
+.ei_Title {
+  margin-left: 10px;
+  color: #363b41;
+}
+.ei_Copy {
+  font-size: 12px;
+  margin-left: 27px;
+}
+
+/*calander style*/
+.di {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.cjslib-date
+{width: 100%;}
+.cjslib-month{
+  width: 100%;
+}
+.cjslib-year{
+  width: 100%;
+}
+
+#calendarContainer,
+#organizerContainer {
+  float: left;
+  margin: 5px;
+}
+
+
+
   </style>
 </head>
 
@@ -249,8 +383,29 @@
   <div class="show" data-wow-delay="2s">
     <div class="row">
 
-
-      <div class="col-8 ml-auto  wow slideInRight" id="top">
+      <div class="col ml-4">
+        <div class="container">
+  <div class="calendar light">
+    <div class="calendar_header">
+      <h1 class = "header_title" style="font-family: popins;">DBIT SPORTS</h1>
+      <p class="header_copy"> Event Plan</p>
+    </div>
+  <div class="calendar_events">
+      <p class="ce_title">Upcoming Events</p>
+    {% for i in upcoming %}
+        
+      <div class="event_item">
+        <div class="ei_Dot dot_active"></div>
+        <div class="ei_Title">{{i.date}}</div>
+        <div class="ei_Copy">{{i.name}}</div>
+      </div>
+        {% endfor %}
+    </div>
+  </div>
+</div>
+  
+      </div>
+      <div class="col-8 mr-3 mt-2 wow slideInRight" id="top">
         <div id="departmentPhotos" class="carousel slide" data-interval="3000" data-pause="hover" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#departmentPhotos" data-slide-to="0" class="active"></li>
@@ -368,11 +523,12 @@
     <div class="row">
 
       <div class="col-6 ml-5 show"
-        style="background: url('https://drive.google.com/uc?id=1upFBuDu31mVXVYCfsEWwNTKoFVldngaM')">
+        style="background: #e8cdd2;box-shadow: 1px 5px 14px brown;">
+
+
         <center>
           <div class="text_for_dbit pt-3">
-
-            <p> LIFE IN DBIT</p>
+             <p> LIFE IN DBIT</p>
           </div>
         </center>
         <div class="row">
@@ -424,12 +580,6 @@
               </figcaption>
             </figure>
           </div>
-
-
-
-
-
-
 
 
           <div class="col-6">
@@ -485,48 +635,80 @@
       <div class="col-5">
         <div class="row">
 
-          <div class="col-8">
-            <div class="col ml-5"
-              style="border: 1px solid #1C6EA4;background-color:#1565C0;color: white; height: 40px;font-size: 30px;">
-              Upcoming
-              Events</div>
-            <div class="col shadow ml-5" style="border: 1px solid #1C6EA4; height: 350px;">
+          <div class="di mx-5" id="calendarContainer"></div>
+        </div>
+          <div class="row">
 
-              <marquee behaviour="scroll" direction="up" onmouseover="this.stop()" onmouseout="this.start()"
-                style="height: 350px;">
-
-                {% for i in upcoming %}
-                <li>
-                  {{i.name}} <br>Date: {{i.date}}
-                </li>
-                {% endfor %}
-              </marquee>
-            </div>
-          </div>
-
-
-          <div class="col-8 mt-3">
-            <div class="col ml-5" style="background-color:#1565C0;color: white; height: 40px;font-size: 30px;">Recent
-              Events</div>
-            <div class="col shadow ml-5" style="border: 1px solid #1C6EA4; height: 350px;">
-
-              <marquee behaviour="scroll" direction="up" onmouseover="this.stop()" onmouseout="this.start()"
-                style="height: 350px;">
-
-                {% for i in recent %}
-                <li>
-                  {{i.name}} <br>Date: {{i.date}}
-                </li>
-                {% endfor %}
-              </marquee>
-            </div>
-          </div>
-
+          <div class="di mx-5 mt-4" id="organizerContainer"></div>
         </div>
       </div>
     </div>
 
+    <script type="text/javascript">
+  "use strict";
 
+// function that creates dummy data for demonstration
+function createDummyData() {
+  var date = new Date();
+  var data = {};
+
+  for (var i = 0; i < 10; i++) {
+    data[date.getFullYear() + i] = {};
+
+    for (var j = 0; j < 12; j++) {
+      data[date.getFullYear() + i][j + 1] = {};
+
+      for (var k = 0; k < Math.ceil(Math.random() * 10); k++) {
+        var l = Math.ceil(Math.random() * 28);
+
+        try {
+          data[date.getFullYear() + i][j + 1][l].push({
+            startTime: "10:00",
+            endTime: "12:00",
+            text: "Some Event Here"
+          });
+        } catch (e) {
+          data[date.getFullYear() + i][j + 1][l] = [];
+          data[date.getFullYear() + i][j + 1][l].push({
+            startTime: "10:00",
+            endTime: "12:00",
+            text: "Some Event Here"
+          });
+        }
+      }
+    }
+  }
+
+  return data;
+}
+
+// creating the dummy static data
+var data = createDummyData();
+
+// initializing a new calendar object, that will use an html container to create itself
+var calendar = new Calendar(
+  "calendarContainer", // id of html container for calendar
+  "small", // size of calendar, can be small | medium | large
+  [
+    "Wednesday", // left most day of calendar labels
+    3 // maximum length of the calendar labels
+  ],
+  [
+    "#E91E63", // primary color
+    "#C2185B", // primary dark color
+    "#FFFFFF", // text color
+    "#F8BBD0" // text dark color
+  ]
+);
+
+// initializing a new organizer object, that will use an html container to create itself
+var organizer = new Organizer(
+  "organizerContainer", // id of html container for calendar
+  calendar, // defining the calendar that the organizer is related to
+  data // giving the organizer the static data that should be displayed
+);
+
+</script>
 
     <hr>
     <!--news clipping-->

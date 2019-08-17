@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from pages.views import home as homepage, about, college_event, vtu_event, nss, gallery, alumini, awards, teamlist,ped
+from pages.views import home as homepage, about, college_event, vtu_event, nss, gallery, alumini, awards, teamlist,ped,ex
 from event_list.views import event_results
 from club_content.views import content
 from home.views import category
@@ -36,4 +36,5 @@ urlpatterns = [
     path('category=<cat>/', category),
     path('administrative', teamlist, name="administrative"),
      path('administrative/ped', ped, name="administrative/ped"),
+        path('ex', ex, name="ex"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

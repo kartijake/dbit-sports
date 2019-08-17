@@ -63,6 +63,26 @@ def teamlist(request):
 def ped(request):
     return render(request, 'PED.html', {})
 
+def ex(request):
+   
+        UpEvents = list(UpcomingEvents.objects.all())
+        RecEvents = list(RecentEvents.objects.all())
+        up = UpcomingEvents()
+        events_dic1 = {
+            "upcoming": UpEvents,
+            "recent": RecEvents
+        }
+        for event in UpEvents:
+            if event.date == date.today():
+                UpcomingEvents.objects.get(date=date.today()).delete()
+                recent = RecentEvents.objects.create(
+                    name=event.name, date=event.date)
+                up.save()
+                recent.save()
+                print(date.today() == event.date)
+   
+        return render(request, 'upcoing.html',events_dic1)
+
 
 # def sports(request, category):
 # 	sports = Sports.objects.get(name=cat)
