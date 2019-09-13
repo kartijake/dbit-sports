@@ -17,10 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
-from pages.views import home as homepage, about, college_event, vtu_event, nss, gallery, alumini, awards, teamlist,ped,ex
+from pages.views import home as homepage, about, college_event, vtu_event, nss, gallery, alumini, awards, teamlist, ped, ex, mag
 from event_list.views import event_results
 from club_content.views import content
-from home.views import category
+from home.views import category, club
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name='home'),
@@ -35,6 +35,11 @@ urlpatterns = [
     path('awards/', awards, name='awards'),
     path('category=<cat>/', category),
     path('administrative', teamlist, name="administrative"),
-     path('administrative/ped', ped, name="administrative/ped"),
-        path('ex', ex, name="ex"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('administrative/ped', ped, name="administrative/ped"),
+    path('ex', ex, name="ex"),
+    path('magazine/', mag),
+    path('clubs=<club>/', club)
+]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

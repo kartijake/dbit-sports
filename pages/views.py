@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import UpcomingEvents, RecentEvents
 from datetime import date
+import json
 
 
 # Create your views here.
@@ -22,7 +23,7 @@ def home(request):
                     name=event.name, date=event.date)
                 up.save()
                 recent.save()
-                print(date.today() == event.date)
+
     except:
         print("Error")
 
@@ -60,28 +61,34 @@ def awards(request):
 def teamlist(request):
     return render(request, 'teamlist.html', {})
 
+
 def ped(request):
     return render(request, 'PED.html', {})
 
+
+def mag(request):
+    return render(request, 'magazine.html', {})
+
+
 def ex(request):
-   
-        UpEvents = list(UpcomingEvents.objects.all())
-        RecEvents = list(RecentEvents.objects.all())
-        up = UpcomingEvents()
-        events_dic1 = {
-            "upcoming": UpEvents,
-            "recent": RecEvents
-        }
-        for event in UpEvents:
-            if event.date == date.today():
-                UpcomingEvents.objects.get(date=date.today()).delete()
-                recent = RecentEvents.objects.create(
-                    name=event.name, date=event.date)
-                up.save()
-                recent.save()
-                print(date.today() == event.date)
-   
-        return render(request, 'upcoing.html',events_dic1)
+
+    UpEvents = list(UpcomingEvents.objects.all())
+    RecEvents = list(RecentEvents.objects.all())
+    up = UpcomingEvents()
+    events_dic1 = {
+        "upcoming": UpEvents,
+        "recent": RecEvents
+    }
+    for event in UpEvents:
+        if event.date == date.today():
+            UpcomingEvents.objects.get(date=date.today()).delete()
+            recent = RecentEvents.objects.create(
+                name=event.name, date=event.date)
+            up.save()
+            recent.save()
+            print(date.today() == event.date)
+
+    return render(request, 'upcoing.html', events_dic1)
 
 
 # def sports(request, category):

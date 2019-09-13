@@ -46,6 +46,26 @@
       width: 100%;
       left: 0;
     }
+
+    @media only screen and (max-width: 600px) {
+
+
+      .collapse,
+      .navbar-collapse {
+        background: #2c3e50;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #3498db, #2c3e50);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #3498db, #2c3e50);
+        margin-top: -2.5%;
+        display: flex;
+        width: 120% !important;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        width: inherit
+      }
+    }
   </style>
 </head>
 
@@ -80,14 +100,14 @@ background: linear-gradient(to left, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Fi
           <ul class="dropdown-menu">
             <!-- second level dropdown -->
             <li class="">
-              <a class=" dropdown-item " href="/About#Vision" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vision and Mission</a>
+              <a class=" dropdown-item " href="/About#Vision" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Vision and Mission</a>
 
             </li>
             <!-- second level dropdown -->
             <li class="">
-              <a class="dropdown-item " href="/About#objective" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Objectives</a>
+              <a class="dropdown-item " href="/About#objective" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Objectives</a>
 
             </li>
           </ul>
@@ -111,8 +131,8 @@ background: linear-gradient(to left, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Fi
             <li class="">
               <a class="dropdown-item " href="/administrative#staff" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Staff</a>
-              </li>
-             <li class="">
+            </li>
+            <li class="">
               <a class="dropdown-item " href="/administrative#cordinator" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Coridators</a>
 
@@ -223,18 +243,42 @@ background: linear-gradient(to left, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Fi
           <a class="nav-link" href="{% url 'NSS' %}">NSS Unit</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Gallery
+          </a>
+          <ul class="dropdown-menu">
+            <!-- second level dropdown -->
+            <li class="">
+              <a class=" dropdown-item " href="{% url 'gallery' %}" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">College gallery</a>
+
+            </li>
+            <!-- second level dropdown -->
+            <li class="">
+              <a class="dropdown-item dropright" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Magazine</a>
+              <ul class="dropdown-menu dropright">
+                <li class="dropright"><a class="dropdown-item" href="/magazine"> Spardha
+                    2k18</a>
+                </li>
+
+              </ul>
+
+
+            </li>
+          </ul>
         </li>
       </ul>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+      <ul class="navbar-nav ml-lg-auto d-flex flex-row justify-content-start ">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="https://www.facebook.com/DonBoscoGroupofInstitutions/"><i
               class="fab fa-facebook"></i></a>
         </li>
-        <li class="nav-item ">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="https://twitter.com/donboscoblr"><i class="fab fa-twitter"></i></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item mr-3">
           <a class="nav-link" href="https://www.youtube.com/user/Donboscoinstitute12"><i class="fab fa-youtube"></i></a>
 
         </li>

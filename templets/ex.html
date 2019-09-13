@@ -580,7 +580,7 @@
                 <div>
                   <p>We'd invent machines that do things less efficiently.</p>
                 </div>
-                <a href="/clubs=nature"></a>
+                <a href="#"></a>
               </figcaption>
             </figure>
           </div>
@@ -670,73 +670,54 @@
 
       // function that creates dummy data for demonstration
       function createDummyData() {
-
-        var data = {};
-        var upcoming = {}
-        var recent = {}
-        {%for i in upcoming %}
-        upcoming['{{ i.date }}'] = '{{ i | safe }}'
-        {% endfor %}
-
-        {%for i in recent %}
-        recent['{{ i.date }}'] = '{{ i | safe }}'
-        {% endfor %}
-
-
-
-        data[2019] = {}
-
-        for (var i = 1; i <= 12; i++) {
-          data[2019][i] = {}
-          for (var j = 0; j < 31; j++) {
-            data[2019][i][j] = []
-            for (var key in upcoming) {
-              var d = new Date(key)
-
-              if (d.getMonth() + 1 === i && d.getDate() == j) {
-                console.log("found")
-                data[2019][i][j].push(
-                  {
-                    startTime: "00:00",
-                    endTime: "24:00",
-                    text: upcoming[key]
-                  }
-                )
-
-              }
-
+        var date = new Date();
+        var data = {
+          2019: {
+            7: {
+              25: [
+                {
+                  startTime: "00:00",
+                  endTime: "24:00",
+                  text: "Christmas Day"
+                }
+              ],
+              26: [
+                {
+                  startTime: "00:00",
+                  endTime: "24:00",
+                  text: "Christmas Day"
+                }
+              ]
             }
           }
-        }
+        };
 
-
-        for (var i = 1; i <= 12; i++) {
-
-          for (var j = 0; j < 31; j++) {
-
-            for (var key in recent) {
-              var d = new Date(key)
-
-              if (d.getMonth() + 1 === i && d.getDate() == j) {
-                console.log("found")
-                data[2019][i][j].push(
-                  {
-                    startTime: "09:00",
-                    endTime: "02:00",
-                    text: recent[key]
-                  }
-                )
-
-              }
-
-            }
-          }
-        }
-
-        console.log('upcoming', data)
-
-
-
+        /*   for (var i = 0; i < 10; i++) {
+           data[date.getFullYear() + i] = {};
+ 
+         for (var j = 0; j < 12; j++) {
+             data[date.getFullYear() + i][j + 1] = {};
+ 
+             for (var k = 0; k < Math.ceil(Math.random() * 10); k++) {
+               var l = Math.ceil(Math.random() * 28);
+ 
+               try {
+                 data[date.getFullYear() + i][j + 1][l].push({
+                   startTime: "10:00",
+                   endTime: "12:00",
+                   text: "Some Event Here"
+                 });
+               } catch (e) {
+                 data[date.getFullYear() + i][j + 1][l] = [];
+                 data[date.getFullYear() + i][j + 1][l].push({
+                   startTime: "10:00",
+                   endTime: "12:00",
+                   text: "Some Event Here"
+                 });
+               }
+             }
+           }
+         }*/
 
         return data;
       }
@@ -872,26 +853,8 @@
       ScrollReveal().reveal('.show', {
         delay: 100
       });
-      var upcoming = {}
-      {%for i in upcoming %}
-      upcoming['{{ i }}'] = '{{ i.date | safe }}'
-      {% endfor %}
 
-      var data = {}
-      for (var key in upcoming) {
-        if (upcoming.hasOwnProperty(key)) {
-          var date = upcoming[key].split('-')
-          var day = date[2]
-          var month = date[1]
-          var year = date[0]
-          data[year] = {
-            month: { day: key }
-          }
 
-          console.log(date)
-        }
-      }
-      console.log(data)
 
     </script>
 

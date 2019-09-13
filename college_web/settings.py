@@ -130,7 +130,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'college_web')
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 
 
 prod_db = dj_database_url.config(conn_max_age=500)
